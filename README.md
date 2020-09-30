@@ -57,3 +57,50 @@ logical      78      22
 > #now let us compare my X chisquare to the Chisquare with alpha=0.10, 0.05 and 0.01
 > #Xalpla at 0.10 = 9.236, so we conclude that we cannot reject the null hypothesis.
 > #so, there is evidence that at 95% that the dice is fair. Xalpha>Xcalculate.
+
+
+
+THE SECOND TRIAL FOR THE FILE HOMEWORK2 PROPER
+
+
+> # H0: p1=p2=p3=p4=p5=p6
+> # Ha: there is a difference
+> # Alpha=0.10
+> dices<-sample(1:6,100,TRUE)
+> summary(dices==1)
+   Mode   FALSE    TRUE 
+logical      86      14 
+> summary(dices==2)
+   Mode   FALSE    TRUE 
+logical      86      14 
+> summary(dices==3)
+   Mode   FALSE    TRUE 
+logical      81      19 
+> summary(dices==4)
+   Mode   FALSE    TRUE 
+logical      84      16 
+> summary(dices==5)
+   Mode   FALSE    TRUE 
+logical      84      16 
+> summary(dices==6)
+   Mode   FALSE    TRUE 
+logical      79      21 
+> 
+> dicerf<-c(15,24,20,14,12,15)
+> res<-chisq.test(dicerf,p= c(1/6,1/6,1/6,1/6,1/6,1/6))
+> res
+
+	Chi-squared test for given probabilities
+
+data:  dicerf
+X-squared = 5.96, df = 5, p-value = 0.3101
+
+> 
+> #the level of significance is aplha= 0.10
+> ##p-value> alpla , that means the dice is unfair at a 90% confidence level
+
+
+
+
+
+
